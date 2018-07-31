@@ -16,6 +16,7 @@ namespace SawingFactory.Entities
         [Key]
         [Column(Order = 2)]
         public string Password { get; set; }
+        [Required]
         public string Role { get; set; }
         public string Name { get; set; }
         [InverseProperty("Customer")]

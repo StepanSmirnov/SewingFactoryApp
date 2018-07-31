@@ -12,10 +12,13 @@ namespace SawingFactory.Entities
     {
         [Key]
         public string ProductId { get; set; }
+        [Required]
         public string Name { get; set; }
         public double Width { get; set; }
-        public string WidhtUnit{ get; set; }
+        [Required]
+        public string WidhtUnit { get; set; }
         public double Length { get; set; }
+        [Required]
         public string LengthUnit { get; set; }
         public byte[] Image { get; set; }
         public string Comment { get; set; }

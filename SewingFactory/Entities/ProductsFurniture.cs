@@ -20,12 +20,13 @@ namespace SawingFactory.Entities
         public string ProductId { get; set; }
         public Product Product { get; set; }
 
+        [Required]
         public string Placing { get; set; }
-        public double Width { get; set; }
+        public double? Width { get; set; }
         public string WidhtUnit { get; set; }
-        public double Length { get; set; }
+        public double? Length { get; set; }
         public string LengthUnit { get; set; }
-        public double Rotation { get; set; }
+        public double? Rotation { get; set; }
         public int Quantity { get; set; }
     }
 }
