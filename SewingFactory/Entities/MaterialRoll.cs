@@ -2,31 +2,41 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SawingFactory.Entities
 {
-    public class Material
+    public class MaterialRoll
     {
         [Key]
+        [Column(Order = 1)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int RollId { get; set; }
+        [Key]
+        [Column(Order = 2)]
         public string MaterialId { get; set; }
-        //[Required]
-        public string Name { get; set; }
-        public string Color { get; set; }
-        public string Pattern { get; set; }
-        public byte[] Image { get; set; }
-        public string Consist { get; set; }
+        public virtual Material Material { get; set; }
+
         public double Width { get; set; }
         [Required]
         public string WidthUnit { get; set; }
+
         public double Length { get; set; }
         [Required]
         public string LengthUnit { get; set; }
-        public double Price { get; set; }
-        public virtual ICollection<Product> Products { get; set; }
+
+        public MaterialRoll() { }
+        
+        public MaterialRoll(Material material)
+        {
+            Material = material;
+            Width = material.Width;
+            WidthUnit = material.WidthUnit;
+            Length = material.Length;
+            LengthUnit = material.LengthUnit;
+        }
 
         [NotMapped]
         public double Area
@@ -34,6 +44,14 @@ namespace SawingFactory.Entities
             get
             {
                 return UnitConverter.Area(Width, WidthUnit, Length, LengthUnit, "м");
+            }
+        }
+        [NotMapped]
+        public double Price
+        {
+            get
+            {
+                return Area / Material.Area * Material.Price; 
             }
         }
     }

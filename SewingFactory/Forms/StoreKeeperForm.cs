@@ -33,7 +33,7 @@ namespace SawingFactory.Forms
 
         private void showMaterials(object sender, EventArgs e)
         {
-            ShowNestedForm(new MaterialsForm(this));
+            ShowNestedForm(new MaterialStockForm(this));
         }
     }
 }

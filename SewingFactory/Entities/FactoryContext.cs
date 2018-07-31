@@ -16,6 +16,6 @@ namespace SawingFactory.Entities
         public DbSet<Furniture> Furnitures { get; set; }
         public DbSet<Material> Materials { get; set; }
         public DbSet<FurnitureStock> FurnitureStocks { get; set; }
-        public DbSet<MaterialStock> MaterialStocks { get; set; }
+        public DbSet<MaterialRoll> MaterialRolls { get; set; }
     }
 }
