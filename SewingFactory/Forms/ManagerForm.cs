@@ -19,5 +19,16 @@ namespace SawingFactory.Forms
         {
             InitializeComponent();
         }
+
+        private void showProducts(object sender, EventArgs e)
+        {
+            ShowNestedForm(new ProductsForm());
+        }
+
+        private void ManagerForm_Load(object sender, EventArgs e)
+        {
+            AddMenuItem("Изделия", showProducts);
+            showProducts(sender, e);
+        }
     }
 }

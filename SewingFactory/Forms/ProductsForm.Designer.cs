@@ -1,6 +1,6 @@
 ﻿namespace SawingFactory.Forms
 {
-    partial class ManagerForm
+    partial class ProductsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,45 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
+            // dataGridView1
             // 
-            this.label2.Text = "Менеджер";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 91);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(604, 370);
+            this.dataGridView1.TabIndex = 1;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 129);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(580, 322);
-            this.dataGridView2.TabIndex = 4;
-            // 
-            // ManagerForm
+            // ProductsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(604, 461);
-            this.Controls.Add(this.dataGridView2);
-            this.Name = "ManagerForm";
-            this.Load += new System.EventHandler(this.ManagerForm_Load);
+            this.Controls.Add(this.dataGridView1);
+            this.Name = "ProductsForm";
+            this.Load += new System.EventHandler(this.ProductsForm_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.dataGridView2, 0);
+            this.Controls.SetChildIndex(this.dataGridView1, 0);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

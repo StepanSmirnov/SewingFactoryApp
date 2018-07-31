@@ -23,11 +23,12 @@ namespace SawingFactory.Forms
         private void DirectorForm_Load(object sender, EventArgs e)
         {
             AddMenuItem("Изделия", showProducts);
+            showProducts(sender, e);
         }
 
         private void showProducts(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            ShowNestedForm(new ProductsForm());
         }
     }
 }

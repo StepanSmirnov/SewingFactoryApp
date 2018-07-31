@@ -24,6 +24,7 @@ namespace SawingFactory.Forms
         {
             AddMenuItem("Ткани", showMaterials);
             AddMenuItem("Фурнитура", showFurniture);
+            showMaterials(sender, e);
         }
 
         private void showFurniture(object sender, EventArgs e)
