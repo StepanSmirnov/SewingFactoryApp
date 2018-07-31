@@ -11,6 +11,11 @@ namespace SawingFactory.Entities
 {
     public class Material
     {
+        public Material()
+        {
+            Products = new HashSet<Product>();
+        }
+
         [Key]
         public string MaterialId { get; set; }
         //[Required]

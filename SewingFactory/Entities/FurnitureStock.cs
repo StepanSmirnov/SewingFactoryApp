@@ -16,7 +16,7 @@ namespace SawingFactory.Entities
         [Key]
         [Column(Order = 2)]
         public string FurnitureId { get; set; }
-        public Furniture Furniture { get; set; }
+        public virtual Furniture Furniture { get; set; }
         public int Quantity { get; set; }
     }
 }

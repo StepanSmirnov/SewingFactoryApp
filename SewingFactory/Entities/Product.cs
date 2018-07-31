@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,11 @@ namespace SawingFactory.Entities
 {
     public class Product
     {
+        public Product()
+        {
+            Materials = new HashSet<Material>();
+        }
+
         [Key]
         public string ProductId { get; set; }
         [Required]
@@ -22,6 +28,27 @@ namespace SawingFactory.Entities
         public string LengthUnit { get; set; }
         public byte[] Image { get; set; }
         public string Comment { get; set; }
-        public ICollection<Material> Materials { get; set; }
+        public virtual ICollection<Material> Materials { get; set; }
+        public virtual ICollection<ProductsFurniture> ProductsFurnitures { get; set; }
+
+        [NotMapped]
+        public double Area
+        {
+            get
+            {
+                return UnitConverter.Area(Width, WidthUnit, Length, LengthUnit, "м");
+            }
+        }
+
+        //I don't understand how to calculate full price using this database
+        //There are no data about amount of materials required for product
+        [NotMapped]
+        public double Price
+        {
+            get
+            {
+                return ProductsFurnitures.Sum(f => f.Quantity * f.Furniture.Price).Value;
+            }
+        }
     }
 }

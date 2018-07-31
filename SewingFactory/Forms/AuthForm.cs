@@ -29,7 +29,23 @@ namespace SawingFactory
                 }
                 else
                 {
-                    new StoreKeeperForm(this).Open();
+                    switch (query.First().Role)
+                    {
+                        case User.UserRole.Customer:
+                            new CustomerForm(this).Open();
+                            break;
+                        case User.UserRole.Manager:
+                            new ManagerForm(this).Open();
+                            break;
+                        case User.UserRole.StoreKeeper:
+                            new StoreKeeperForm(this).Open();
+                            break;
+                        case User.UserRole.Director:
+                            new DirectorForm(this).Open();
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
         }
@@ -39,7 +55,7 @@ namespace SawingFactory
             //Debug code
             using (var context = new FactoryContext())
             {
-                var user = context.Users.Single(u => u.RoleId == (int)User.UserRole.StoreKeeper);
+                var user = context.Users.Single(u => u.RoleId == (int)User.UserRole.Manager);
                 textBox1.Text = user.Login;
                 textBox2.Text = user.Password;
             }

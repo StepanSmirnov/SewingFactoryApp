@@ -17,7 +17,7 @@ namespace SawingFactory.Entities
         [Key]
         [Column(Order = 2)]
         public int OrderId { get; set; }
-        public Order Order { get; set; }
+        public virtual Order Order { get; set; }
 
         public int Quantity { get; set; }
     }

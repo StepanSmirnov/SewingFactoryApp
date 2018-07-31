@@ -54,6 +54,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\ProducedProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProducedProductsForm.Designer.cs">
+      <DependentUpon>ProducedProductsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ProductsFurnitureHisotry.cs" />
+    <Compile Include="Entities\PruducedProduct.cs" />
+    <Compile Include="Entities\ProductsHistory.cs" />
     <Compile Include="Entities\UnitConverter.cs" />
     <Compile Include="Forms\AuthForm.cs">
       <SubType>Form</SubType>
@@ -77,10 +86,10 @@
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\ProductsFurniture.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="Forms\BaseMenuForm.cs">
+    <Compile Include="Forms\Menus\BaseMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\BaseMenuForm.Designer.cs">
+    <Compile Include="Forms\Menus\BaseMenuForm.Designer.cs">
       <DependentUpon>BaseMenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\BaseNestedForm.cs">
@@ -89,16 +98,16 @@
     <Compile Include="Forms\BaseNestedForm.Designer.cs">
       <DependentUpon>BaseNestedForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CustomerForm.cs">
+    <Compile Include="Forms\Menus\CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CustomerForm.Designer.cs">
+    <Compile Include="Forms\Menus\CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DirectorForm.cs">
+    <Compile Include="Forms\Menus\DirectorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DirectorForm.Designer.cs">
+    <Compile Include="Forms\Menus\DirectorForm.Designer.cs">
       <DependentUpon>DirectorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FurnitureStockForm.cs">
@@ -107,10 +116,10 @@
     <Compile Include="Forms\FurnitureStockForm.Designer.cs">
       <DependentUpon>FurnitureStockForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ManagerForm.cs">
+    <Compile Include="Forms\Menus\ManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ManagerForm.Designer.cs">
+    <Compile Include="Forms\Menus\ManagerForm.Designer.cs">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MaterialStockForm.cs">
@@ -125,10 +134,10 @@
     <Compile Include="Forms\ProductsForm.Designer.cs">
       <DependentUpon>ProductsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\StoreKeeperForm.cs">
+    <Compile Include="Forms\Menus\StoreKeeperForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\StoreKeeperForm.Designer.cs">
+    <Compile Include="Forms\Menus\StoreKeeperForm.Designer.cs">
       <DependentUpon>StoreKeeperForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201807310536116_InitialCreate.cs" />
@@ -159,31 +168,60 @@
     <Compile Include="Migrations\201807311142207_Rename_material_stock.Designer.cs">
       <DependentUpon>201807311142207_Rename_material_stock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807311436422_add_produced_poducts.cs" />
+    <Compile Include="Migrations\201807311436422_add_produced_poducts.Designer.cs">
+      <DependentUpon>201807311436422_add_produced_poducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807311512379_Add_prducts_history.cs" />
+    <Compile Include="Migrations\201807311512379_Add_prducts_history.Designer.cs">
+      <DependentUpon>201807311512379_Add_prducts_history.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807311515502_Add_prducts_history1.cs" />
+    <Compile Include="Migrations\201807311515502_Add_prducts_history1.Designer.cs">
+      <DependentUpon>201807311515502_Add_prducts_history1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807311519122_Add_prducts_history2.cs" />
+    <Compile Include="Migrations\201807311519122_Add_prducts_history2.Designer.cs">
+      <DependentUpon>201807311519122_Add_prducts_history2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807311654285_Add_prducts_history3.cs" />
+    <Compile Include="Migrations\201807311654285_Add_prducts_history3.Designer.cs">
+      <DependentUpon>201807311654285_Add_prducts_history3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\ProducedProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Migrations\ProducedProductsForm.Designer.cs">
+      <DependentUpon>ProducedProductsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\ProducedProductsForm.resx">
+      <DependentUpon>ProducedProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AuthForm.resx">
       <DependentUpon>AuthForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\BaseMenuForm.resx">
+    <EmbeddedResource Include="Forms\Menus\BaseMenuForm.resx">
       <DependentUpon>BaseMenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BaseNestedForm.resx">
       <DependentUpon>BaseNestedForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CustomerForm.resx">
+    <EmbeddedResource Include="Forms\Menus\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DirectorForm.resx">
+    <EmbeddedResource Include="Forms\Menus\DirectorForm.resx">
       <DependentUpon>DirectorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FurnitureStockForm.resx">
       <DependentUpon>FurnitureStockForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ManagerForm.resx">
+    <EmbeddedResource Include="Forms\Menus\ManagerForm.resx">
       <DependentUpon>ManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MaterialStockForm.resx">
@@ -192,7 +230,7 @@
     <EmbeddedResource Include="Forms\ProductsForm.resx">
       <DependentUpon>ProductsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\StoreKeeperForm.resx">
+    <EmbeddedResource Include="Forms\Menus\StoreKeeperForm.resx">
       <DependentUpon>StoreKeeperForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807310536116_InitialCreate.resx">
@@ -215,6 +253,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807311142207_Rename_material_stock.resx">
       <DependentUpon>201807311142207_Rename_material_stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807311436422_add_produced_poducts.resx">
+      <DependentUpon>201807311436422_add_produced_poducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807311512379_Add_prducts_history.resx">
+      <DependentUpon>201807311512379_Add_prducts_history.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807311515502_Add_prducts_history1.resx">
+      <DependentUpon>201807311515502_Add_prducts_history1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807311519122_Add_prducts_history2.resx">
+      <DependentUpon>201807311519122_Add_prducts_history2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807311654285_Add_prducts_history3.resx">
+      <DependentUpon>201807311654285_Add_prducts_history3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ProducedProductsForm.resx">
+      <DependentUpon>ProducedProductsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

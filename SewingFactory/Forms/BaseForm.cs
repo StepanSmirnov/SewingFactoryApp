@@ -1,6 +1,7 @@
 ﻿using SawingFactory.Entities;
 using System;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace SawingFactory
 {

@@ -2,23 +2,21 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SawingFactory.Entities
 {
-    public class ProductsFurniture
+    public class ProductsFurnitureHisotry
     {
         [Key]
-        [Column(Order = 1)]
-        public string FurnitureId { get; set; }
-        public virtual Furniture Furniture { get; set; }
+        [Column(Order =1)]
+        public int SpecId { get; set; }
         [Key]
         [Column(Order = 2)]
-        public string ProductId { get; set; }
-        public virtual Product Product { get; set; }
+        public int FurnitureId { get; set; }
+        public virtual Furniture Furniture { get; set; }
 
         [Required]
         public string Placing { get; set; }
