@@ -59,6 +59,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Назад";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -99,11 +100,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         protected System.Windows.Forms.Button button1;
         protected System.Windows.Forms.Label label2;
+        protected System.Windows.Forms.Panel panel1;
+        protected System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

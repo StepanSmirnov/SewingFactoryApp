@@ -2,6 +2,7 @@
 using System.Data;
 using System.Linq;
 using SawingFactory.Entities;
+using SawingFactory.Forms;
 
 namespace SawingFactory
 {
@@ -26,14 +27,16 @@ namespace SawingFactory
             }
             else
             {
-                System.Windows.Forms.MessageBox.Show("Успешно");
+                new StoreKeeperForm(this).Open();
             }
         }
 
         private void AuthForm_Load(object sender, EventArgs e)
         {
-            //DbContext_.Users.Add(new User { Login = "customer1", Password = "customer1", Role = "customer" });
-            //DbContext_.SaveChanges();
+            //Debug code
+            var user = DbContext_.Users.Single(u => u.RoleId == (int)User.UserRole.StoreKeeper);
+            textBox1.Text = user.Login;
+            textBox2.Text = user.Password;
         }
     }
 }

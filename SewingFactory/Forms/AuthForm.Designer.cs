@@ -35,6 +35,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // button1
+            // 
+            this.button1.Visible = false;
+            // 
             // label2
             // 
             this.label2.Text = "Авторизация";

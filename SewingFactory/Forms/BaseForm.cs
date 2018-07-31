@@ -46,5 +46,10 @@ namespace SawingFactory
             if (PrevForm_ == null) return;
             PrevForm_.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Back();
+        }
     }
 }

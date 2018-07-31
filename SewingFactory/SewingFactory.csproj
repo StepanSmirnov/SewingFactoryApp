@@ -76,6 +76,48 @@
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\ProductsFurniture.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Forms\BaseMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaseMenuForm.Designer.cs">
+      <DependentUpon>BaseMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BaseNestedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaseNestedForm.Designer.cs">
+      <DependentUpon>BaseNestedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DirectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DirectorForm.Designer.cs">
+      <DependentUpon>DirectorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagerForm.Designer.cs">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MaterialsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MaterialsForm.Designer.cs">
+      <DependentUpon>MaterialsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StoreKeeperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StoreKeeperForm.Designer.cs">
+      <DependentUpon>StoreKeeperForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201807310536116_InitialCreate.cs" />
     <Compile Include="Migrations\201807310536116_InitialCreate.Designer.cs">
       <DependentUpon>201807310536116_InitialCreate.cs</DependentUpon>
@@ -92,6 +134,14 @@
     <Compile Include="Migrations\201807310630189_For import.Designer.cs">
       <DependentUpon>201807310630189_For import.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807310746544_UserRole_as_enum.cs" />
+    <Compile Include="Migrations\201807310746544_UserRole_as_enum.Designer.cs">
+      <DependentUpon>201807310746544_UserRole_as_enum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807310750419_hide_role.cs" />
+    <Compile Include="Migrations\201807310750419_hide_role.Designer.cs">
+      <DependentUpon>201807310750419_hide_role.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,6 +150,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BaseMenuForm.resx">
+      <DependentUpon>BaseMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BaseNestedForm.resx">
+      <DependentUpon>BaseNestedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DirectorForm.resx">
+      <DependentUpon>DirectorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagerForm.resx">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MaterialsForm.resx">
+      <DependentUpon>MaterialsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StoreKeeperForm.resx">
+      <DependentUpon>StoreKeeperForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807310536116_InitialCreate.resx">
       <DependentUpon>201807310536116_InitialCreate.cs</DependentUpon>
@@ -112,6 +183,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807310630189_For import.resx">
       <DependentUpon>201807310630189_For import.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807310746544_UserRole_as_enum.resx">
+      <DependentUpon>201807310746544_UserRole_as_enum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807310750419_hide_role.resx">
+      <DependentUpon>201807310750419_hide_role.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
