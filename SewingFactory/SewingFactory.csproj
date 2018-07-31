@@ -76,6 +76,23 @@
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\ProductsFurniture.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Migrations\201807310536116_InitialCreate.cs" />
+    <Compile Include="Migrations\201807310536116_InitialCreate.Designer.cs">
+      <DependentUpon>201807310536116_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807310614416_Add required property to some fields.cs" />
+    <Compile Include="Migrations\201807310614416_Add required property to some fields.Designer.cs">
+      <DependentUpon>201807310614416_Add required property to some fields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807310619502_Correct_field_name.cs" />
+    <Compile Include="Migrations\201807310619502_Correct_field_name.Designer.cs">
+      <DependentUpon>201807310619502_Correct_field_name.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807310630189_For import.cs" />
+    <Compile Include="Migrations\201807310630189_For import.Designer.cs">
+      <DependentUpon>201807310630189_For import.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AuthForm.resx">
@@ -83,6 +100,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807310536116_InitialCreate.resx">
+      <DependentUpon>201807310536116_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807310614416_Add required property to some fields.resx">
+      <DependentUpon>201807310614416_Add required property to some fields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807310619502_Correct_field_name.resx">
+      <DependentUpon>201807310619502_Correct_field_name.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807310630189_For import.resx">
+      <DependentUpon>201807310630189_For import.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

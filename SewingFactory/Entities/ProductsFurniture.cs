@@ -23,7 +23,7 @@ namespace SawingFactory.Entities
         [Required]
         public string Placing { get; set; }
         public double? Width { get; set; }
-        public string WidhtUnit { get; set; }
+        public string WidthUnit { get; set; }
         public double? Length { get; set; }
         public string LengthUnit { get; set; }
         public double? Rotation { get; set; }

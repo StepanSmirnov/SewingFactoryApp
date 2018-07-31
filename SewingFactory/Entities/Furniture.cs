@@ -15,12 +15,12 @@ namespace SawingFactory.Entities
         public string Name { get; set; }
         public string Type { get; set; }
         public double? Width { get; set; }
-        public string WidhtUnit { get; set; }
+        public string WidthUnit { get; set; }
         public double? Length { get; set; }
         public string LengthUnit { get; set; }
         public double? Weight { get; set; }
         public string WeightUnit { get; set; }
         public byte[] Image { get; set; }
-        public double Price { get; set; }
+        public double? Price { get; set; }
     }
 }

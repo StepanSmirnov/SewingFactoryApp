@@ -12,7 +12,7 @@ namespace SawingFactory.Entities
     {
         [Key]
         public string MaterialId { get; set; }
-        [Required]
+        //[Required]
         public string Name { get; set; }
         public string Color { get; set; }
         public string Pattern { get; set; }
@@ -20,7 +20,7 @@ namespace SawingFactory.Entities
         public string Consist { get; set; }
         public double Width { get; set; }
         [Required]
-        public string WidhtUnit { get; set; }
+        public string WidthUnit { get; set; }
         public double Length { get; set; }
         [Required]
         public string LengthUnit { get; set; }

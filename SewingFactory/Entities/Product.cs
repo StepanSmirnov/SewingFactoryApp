@@ -16,7 +16,7 @@ namespace SawingFactory.Entities
         public string Name { get; set; }
         public double Width { get; set; }
         [Required]
-        public string WidhtUnit { get; set; }
+        public string WidthUnit { get; set; }
         public double Length { get; set; }
         [Required]
         public string LengthUnit { get; set; }
