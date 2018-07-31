@@ -6,18 +6,15 @@ namespace SawingFactory
 {
     public partial class BaseForm : Form
     {
-        protected FactoryContext DbContext_;
         public BaseForm()
         {
             InitializeComponent();
-            DbContext_ = new FactoryContext();
         }
 
         public BaseForm(BaseForm baseForm)
         {
             InitializeComponent();
             PrevForm_ = baseForm;
-            DbContext_ = new FactoryContext();
         }
 
         public void Back()

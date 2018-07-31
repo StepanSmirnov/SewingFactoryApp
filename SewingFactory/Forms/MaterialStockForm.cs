@@ -31,10 +31,21 @@ namespace SawingFactory.Forms
 
         private void UpdateDataGrid()
         {
-            var query = DbContext_.MaterialRolls
-                .GroupBy(roll => roll.MaterialId).AsEnumerable()
-                .Select(group => new { MaterialId = group.Key, Count = group.Count(), Area = group.Sum(m => m.Area), Price = group.Sum(m => m.Price) });
-            dataGridView1.DataSource = query.ToList();
+            using (var context = new FactoryContext())
+            {
+                var query = context.MaterialRolls
+            .GroupBy(roll => roll.Material).AsEnumerable()
+            .Select(group => new
+            {
+                group.Key.MaterialId,
+                group.Key.Name,
+                Count = group.Count(),
+                Area = group.Sum(m => m.Area),
+                Price = group.Sum(m => m.Price)
+            });
+                dataGridView1.DataSource = query.ToList();
+
+            }
         }
 
     }

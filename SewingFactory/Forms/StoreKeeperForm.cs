@@ -28,7 +28,7 @@ namespace SawingFactory.Forms
 
         private void showFurniture(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            ShowNestedForm(new FurnitureStockForm(this));
         }
 
         private void showMaterials(object sender, EventArgs e)

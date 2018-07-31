@@ -38,7 +38,6 @@ namespace SawingFactory.Entities
             LengthUnit = material.LengthUnit;
         }
 
-        [NotMapped]
         public double Area
         {
             get
@@ -46,7 +45,7 @@ namespace SawingFactory.Entities
                 return UnitConverter.Area(Width, WidthUnit, Length, LengthUnit, "м");
             }
         }
-        [NotMapped]
+
         public double Price
         {
             get

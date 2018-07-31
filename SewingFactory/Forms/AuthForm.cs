@@ -20,23 +20,29 @@ namespace SawingFactory
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var query = DbContext_.Users.Where(u => u.Login == textBox1.Text && u.Password == textBox2.Text);
-            if (query.Count() == 0)
+            using (var context = new FactoryContext())
             {
-                System.Windows.Forms.MessageBox.Show("Ошибочно введён логин или пароль");
-            }
-            else
-            {
-                new StoreKeeperForm(this).Open();
+                var query = context.Users.Where(u => u.Login == textBox1.Text && u.Password == textBox2.Text);
+                if (query.Count() == 0)
+                {
+                    System.Windows.Forms.MessageBox.Show("Ошибочно введён логин или пароль");
+                }
+                else
+                {
+                    new StoreKeeperForm(this).Open();
+                }
             }
         }
 
         private void AuthForm_Load(object sender, EventArgs e)
         {
             //Debug code
-            var user = DbContext_.Users.Single(u => u.RoleId == (int)User.UserRole.StoreKeeper);
-            textBox1.Text = user.Login;
-            textBox2.Text = user.Password;
+            using (var context = new FactoryContext())
+            {
+                var user = context.Users.Single(u => u.RoleId == (int)User.UserRole.StoreKeeper);
+                textBox1.Text = user.Login;
+                textBox2.Text = user.Password;
+            }
         }
     }
 }
