@@ -1,4 +1,4 @@
-namespace SawingFactory.Migrations
+namespace SawingFactory.DAL.Migrations
 {
     using System;
     using System.Data.Entity;
@@ -11,6 +11,8 @@ namespace SawingFactory.Migrations
         {
             AutomaticMigrationsEnabled = false;
             ContextKey = "SawingFactory.DAL.Entities.FactoryContext";
+            MigrationsDirectory = "DA\\Migrations";
+            MigrationsNamespace = "SawingFactory.DAL.Migrations";
         }
 
         protected override void Seed(SawingFactory.DAL.Entities.FactoryContext context)

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using SawingFactory.DAL.Entities;
 
 namespace SawingFactory.Forms
 {
@@ -15,7 +16,7 @@ namespace SawingFactory.Forms
             InitializeComponent();
         }
 
-        public CustomerForm(BaseForm baseForm) : base(baseForm)
+        public CustomerForm(BaseForm baseForm, User user) : base(baseForm, user)
         {
             InitializeComponent();
         }
@@ -23,11 +24,17 @@ namespace SawingFactory.Forms
         private void CustomerForm_Load(object sender, EventArgs e)
         {
             AddMenuItem("Изделия", showProducts);
+            AddMenuItem("Конструктор изделий", showConstructor);
+        }
+
+        private void showConstructor(object sender, EventArgs e)
+        {
+            ShowNestedForm(new ProductsConstructorForm());
         }
 
         private void showProducts(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            ShowNestedForm(new ProductsForm());
         }
     }
 }

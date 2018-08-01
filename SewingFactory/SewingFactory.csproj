@@ -141,6 +141,12 @@
     <Compile Include="Forms\MaterialStockForm.Designer.cs">
       <DependentUpon>MaterialStockForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ProductsConstructorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProductsConstructorForm.Designer.cs">
+      <DependentUpon>ProductsConstructorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ProductsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,16 +208,16 @@
       <DependentUpon>201807311654285_Add_prducts_history3.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL\Migrations\Configuration.cs" />
-    <Compile Include="Migrations\201807311806517_fix_produced_product_key.cs" />
-    <Compile Include="Migrations\201807311806517_fix_produced_product_key.Designer.cs">
+    <Compile Include="DAL\Migrations\201807311806517_fix_produced_product_key.cs" />
+    <Compile Include="DAL\Migrations\201807311806517_fix_produced_product_key.Designer.cs">
       <DependentUpon>201807311806517_fix_produced_product_key.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808010607358_remove_width_from_material_roll.cs" />
-    <Compile Include="Migrations\201808010607358_remove_width_from_material_roll.Designer.cs">
+    <Compile Include="DAL\Migrations\201808010607358_remove_width_from_material_roll.cs" />
+    <Compile Include="DAL\Migrations\201808010607358_remove_width_from_material_roll.Designer.cs">
       <DependentUpon>201808010607358_remove_width_from_material_roll.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808010824238_add_auto_icrement_to_furniture_stock.cs" />
-    <Compile Include="Migrations\201808010824238_add_auto_icrement_to_furniture_stock.Designer.cs">
+    <Compile Include="DAL\Migrations\201808010824238_add_auto_icrement_to_furniture_stock.cs" />
+    <Compile Include="DAL\Migrations\201808010824238_add_auto_icrement_to_furniture_stock.Designer.cs">
       <DependentUpon>201808010824238_add_auto_icrement_to_furniture_stock.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -251,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MaterialStockForm.resx">
       <DependentUpon>MaterialStockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProductsConstructorForm.resx">
+      <DependentUpon>ProductsConstructorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProductsForm.resx">
       <DependentUpon>ProductsForm.cs</DependentUpon>
@@ -294,13 +303,13 @@
     <EmbeddedResource Include="DAL\Migrations\201807311654285_Add_prducts_history3.resx">
       <DependentUpon>201807311654285_Add_prducts_history3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311806517_fix_produced_product_key.resx">
+    <EmbeddedResource Include="DAL\Migrations\201807311806517_fix_produced_product_key.resx">
       <DependentUpon>201807311806517_fix_produced_product_key.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808010607358_remove_width_from_material_roll.resx">
+    <EmbeddedResource Include="DAL\Migrations\201808010607358_remove_width_from_material_roll.resx">
       <DependentUpon>201808010607358_remove_width_from_material_roll.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201808010824238_add_auto_icrement_to_furniture_stock.resx">
+    <EmbeddedResource Include="DAL\Migrations\201808010824238_add_auto_icrement_to_furniture_stock.resx">
       <DependentUpon>201808010824238_add_auto_icrement_to_furniture_stock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -33,15 +33,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
+            this.button1.Location = new System.Drawing.Point(285, 30);
             this.button1.Visible = false;
             // 
             // label2
             // 
+            this.label2.Size = new System.Drawing.Size(382, 91);
             this.label2.Text = "Авторизация";
+            // 
+            // panel1
+            // 
+            this.panel1.Size = new System.Drawing.Size(382, 91);
             // 
             // textBox1
             // 
@@ -50,7 +58,7 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.Location = new System.Drawing.Point(127, 171);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(433, 29);
+            this.textBox1.Size = new System.Drawing.Size(211, 29);
             this.textBox1.TabIndex = 1;
             // 
             // label1
@@ -80,14 +88,14 @@
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox2.Location = new System.Drawing.Point(127, 206);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(433, 29);
+            this.textBox2.Size = new System.Drawing.Size(211, 29);
             this.textBox2.TabIndex = 4;
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(485, 241);
+            this.button2.Location = new System.Drawing.Point(263, 241);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 31);
             this.button2.TabIndex = 5;
@@ -98,7 +106,7 @@
             // AuthForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(604, 317);
+            this.ClientSize = new System.Drawing.Size(382, 317);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
@@ -107,11 +115,14 @@
             this.MinimumSize = new System.Drawing.Size(398, 356);
             this.Name = "AuthForm";
             this.Load += new System.EventHandler(this.AuthForm_Load);
+            this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.textBox1, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.textBox2, 0);
             this.Controls.SetChildIndex(this.button2, 0);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

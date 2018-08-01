@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SawingFactory.DAL.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,14 +11,17 @@ namespace SawingFactory.Forms
 {
     public partial class BaseMenuForm : BaseForm
     {
+        protected readonly User user;
+
         public BaseMenuForm()
         {
             InitializeComponent();
         }
 
-        public BaseMenuForm(BaseForm baseForm) : base(baseForm)
+        public BaseMenuForm(BaseForm baseForm, User user) : base(baseForm)
         {
             InitializeComponent();
+            this.user = user;
         }
 
         protected void AddMenuItem(string text, EventHandler handler)

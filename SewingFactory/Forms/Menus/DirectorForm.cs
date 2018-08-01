@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using SawingFactory.DAL.Entities;
 
 namespace SawingFactory.Forms
 {
@@ -15,7 +16,7 @@ namespace SawingFactory.Forms
             InitializeComponent();
         }
 
-        public DirectorForm(BaseForm baseForm) : base(baseForm)
+        public DirectorForm(BaseForm baseForm, User user) : base(baseForm, user)
         {
             InitializeComponent();
         }

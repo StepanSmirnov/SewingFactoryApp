@@ -32,16 +32,16 @@ namespace SawingFactory
                     switch (query.First().Role)
                     {
                         case User.UserRole.Customer:
-                            new CustomerForm(this).Open();
+                            new CustomerForm(this, query.First()).Open();
                             break;
                         case User.UserRole.Manager:
-                            new ManagerForm(this).Open();
+                            new ManagerForm(this, query.First()).Open();
                             break;
                         case User.UserRole.StoreKeeper:
-                            new StoreKeeperForm(this).Open();
+                            new StoreKeeperForm(this, query.First()).Open();
                             break;
                         case User.UserRole.Director:
-                            new DirectorForm(this).Open();
+                            new DirectorForm(this, query.First()).Open();
                             break;
                         default:
                             break;
@@ -55,7 +55,7 @@ namespace SawingFactory
             //Debug code
             using (var context = new FactoryContext())
             {
-                var user = context.Users.Single(u => u.RoleId == (int)User.UserRole.StoreKeeper);
+                var user = context.Users.Single(u => u.RoleId == (int)User.UserRole.Customer);
                 textBox1.Text = user.Login;
                 textBox2.Text = user.Password;
             }
