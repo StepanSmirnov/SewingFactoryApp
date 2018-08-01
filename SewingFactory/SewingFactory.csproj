@@ -55,12 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\Entities\MaterialSupply.cs" />
-    <Compile Include="DA\Migrations\201808011336039_add_auto_increment_to_order.cs" />
-    <Compile Include="DA\Migrations\201808011336039_add_auto_increment_to_order.Designer.cs">
+    <Compile Include="DAL\Migrations\201808011336039_add_auto_increment_to_order.cs" />
+    <Compile Include="DAL\Migrations\201808011336039_add_auto_increment_to_order.Designer.cs">
       <DependentUpon>201808011336039_add_auto_increment_to_order.cs</DependentUpon>
     </Compile>
-    <Compile Include="DA\Migrations\201808011346583_change_foreign_keys.cs" />
-    <Compile Include="DA\Migrations\201808011346583_change_foreign_keys.Designer.cs">
+    <Compile Include="DAL\Migrations\201808011346583_change_foreign_keys.cs" />
+    <Compile Include="DAL\Migrations\201808011346583_change_foreign_keys.Designer.cs">
       <DependentUpon>201808011346583_change_foreign_keys.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CreateOrderForm.cs">
@@ -236,10 +236,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DA\Migrations\201808011336039_add_auto_increment_to_order.resx">
+    <EmbeddedResource Include="DAL\Migrations\201808011336039_add_auto_increment_to_order.resx">
       <DependentUpon>201808011336039_add_auto_increment_to_order.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DA\Migrations\201808011346583_change_foreign_keys.resx">
+    <EmbeddedResource Include="DAL\Migrations\201808011346583_change_foreign_keys.resx">
       <DependentUpon>201808011346583_change_foreign_keys.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateOrderForm.resx">

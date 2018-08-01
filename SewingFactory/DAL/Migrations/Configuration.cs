@@ -11,7 +11,7 @@ namespace SawingFactory.DAL.Migrations
         {
             AutomaticMigrationsEnabled = false;
             ContextKey = "SawingFactory.DAL.Entities.FactoryContext";
-            MigrationsDirectory = "DA\\Migrations";
+            MigrationsDirectory = "DAL\\Migrations";
             MigrationsNamespace = "SawingFactory.DAL.Migrations";
         }
 
