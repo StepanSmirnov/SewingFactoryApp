@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsConstructorForm));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.productPicture = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -40,24 +40,28 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.widthEdit = new System.Windows.Forms.NumericUpDown();
+            this.lengthEdit = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.materialBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nameEdit = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productPicture)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.widthEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lengthEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(821, 30);
+            this.button1.Location = new System.Drawing.Point(1721, 30);
             // 
             // label2
             // 
@@ -73,25 +77,24 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoScroll = true;
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(7, 56);
+            this.panel2.Controls.Add(this.productPicture);
+            this.panel2.Location = new System.Drawing.Point(7, 87);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(628, 423);
+            this.panel2.Size = new System.Drawing.Size(628, 392);
             this.panel2.TabIndex = 1;
             // 
-            // pictureBox2
+            // productPicture
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(5, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(131, 105);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
-            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove);
-            this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
-            this.pictureBox2.Resize += new System.EventHandler(this.pictureBox2_Resize);
+            this.productPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("productPicture.BackgroundImage")));
+            this.productPicture.Location = new System.Drawing.Point(5, 3);
+            this.productPicture.Name = "productPicture";
+            this.productPicture.Size = new System.Drawing.Size(131, 105);
+            this.productPicture.TabIndex = 0;
+            this.productPicture.TabStop = false;
+            this.productPicture.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.productPicture.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove);
+            this.productPicture.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
+            this.productPicture.Resize += new System.EventHandler(this.pictureBox2_Resize);
             // 
             // panel3
             // 
@@ -141,67 +144,69 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.nameEdit);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.numericUpDown2);
-            this.panel5.Controls.Add(this.numericUpDown1);
+            this.panel5.Controls.Add(this.widthEdit);
+            this.panel5.Controls.Add(this.lengthEdit);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.comboBox1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 91);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(643, 35);
+            this.panel5.Size = new System.Drawing.Size(643, 73);
             this.panel5.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(191, 7);
+            this.label4.Location = new System.Drawing.Point(7, 42);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 20);
+            this.label4.Size = new System.Drawing.Size(100, 20);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Ширина";
+            this.label4.Text = "Ширина (см)";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(392, 7);
+            this.label3.Location = new System.Drawing.Point(169, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 20);
+            this.label3.Size = new System.Drawing.Size(91, 20);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Длина";
+            this.label3.Text = "Длина (см)";
             // 
-            // numericUpDown2
+            // widthEdit
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericUpDown2.Location = new System.Drawing.Point(265, 3);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.widthEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.widthEdit.Location = new System.Drawing.Point(112, 38);
+            this.widthEdit.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 26);
-            this.numericUpDown2.TabIndex = 3;
-            this.numericUpDown2.ThousandsSeparator = true;
-            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
+            this.widthEdit.Name = "widthEdit";
+            this.widthEdit.Size = new System.Drawing.Size(52, 26);
+            this.widthEdit.TabIndex = 3;
+            this.widthEdit.ThousandsSeparator = true;
+            this.widthEdit.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
-            // numericUpDown1
+            // lengthEdit
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericUpDown1.Location = new System.Drawing.Point(457, 5);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.lengthEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lengthEdit.Location = new System.Drawing.Point(265, 40);
+            this.lengthEdit.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 26);
-            this.numericUpDown1.TabIndex = 2;
-            this.numericUpDown1.ThousandsSeparator = true;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.lengthEdit.Name = "lengthEdit";
+            this.lengthEdit.Size = new System.Drawing.Size(52, 26);
+            this.lengthEdit.TabIndex = 2;
+            this.lengthEdit.ThousandsSeparator = true;
+            this.lengthEdit.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label1
             // 
@@ -215,12 +220,38 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.materialBindingSource;
+            this.comboBox1.DisplayMember = "Name";
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(63, 4);
+            this.comboBox1.Location = new System.Drawing.Point(61, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.Size = new System.Drawing.Size(571, 28);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.ValueMember = "MaterialId";
+            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
+            // 
+            // materialBindingSource
+            // 
+            this.materialBindingSource.DataSource = typeof(SawingFactory.DAL.Entities.Material);
+            // 
+            // nameEdit
+            // 
+            this.nameEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameEdit.Location = new System.Drawing.Point(412, 39);
+            this.nameEdit.Name = "nameEdit";
+            this.nameEdit.Size = new System.Drawing.Size(220, 26);
+            this.nameEdit.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(323, 42);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 20);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Название";
             // 
             // ProductsConstructorForm
             // 
@@ -233,7 +264,6 @@
             this.MinimumSize = new System.Drawing.Size(726, 475);
             this.Name = "ProductsConstructorForm";
             this.Load += new System.EventHandler(this.ProductsConstructorForm_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.ProductsConstructorForm_Paint);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.panel4, 0);
@@ -242,13 +272,14 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productPicture)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.widthEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lengthEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -261,13 +292,16 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox productPicture;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown widthEdit;
+        private System.Windows.Forms.NumericUpDown lengthEdit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.BindingSource materialBindingSource;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox nameEdit;
     }
 }

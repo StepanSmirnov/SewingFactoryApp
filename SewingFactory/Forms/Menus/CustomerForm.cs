@@ -25,6 +25,12 @@ namespace SawingFactory.Forms
         {
             AddMenuItem("Изделия", showProducts);
             AddMenuItem("Конструктор изделий", showConstructor);
+            AddMenuItem("Новый заказ", showCreateOrder);
+        }
+
+        private void showCreateOrder(object sender, EventArgs e)
+        {
+            ShowNestedForm(new CreateOrderForm(user));
         }
 
         private void showConstructor(object sender, EventArgs e)

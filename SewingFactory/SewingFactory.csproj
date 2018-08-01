@@ -55,6 +55,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\Entities\MaterialSupply.cs" />
+    <Compile Include="DA\Migrations\201808011336039_add_auto_increment_to_order.cs" />
+    <Compile Include="DA\Migrations\201808011336039_add_auto_increment_to_order.Designer.cs">
+      <DependentUpon>201808011336039_add_auto_increment_to_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DA\Migrations\201808011346583_change_foreign_keys.cs" />
+    <Compile Include="DA\Migrations\201808011346583_change_foreign_keys.Designer.cs">
+      <DependentUpon>201808011346583_change_foreign_keys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateOrderForm.Designer.cs">
+      <DependentUpon>CreateOrderForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FurnitureSupplyForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +236,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DA\Migrations\201808011336039_add_auto_increment_to_order.resx">
+      <DependentUpon>201808011336039_add_auto_increment_to_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DA\Migrations\201808011346583_change_foreign_keys.resx">
+      <DependentUpon>201808011346583_change_foreign_keys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateOrderForm.resx">
+      <DependentUpon>CreateOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FurnitureSupplyForm.resx">
       <DependentUpon>FurnitureSupplyForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -326,6 +349,8 @@
     <None Include="Properties\DataSources\SawingFactory.DAL.Entities.FurnitureStock.datasource" />
     <None Include="Properties\DataSources\SawingFactory.DAL.Entities.Material.datasource" />
     <None Include="Properties\DataSources\SawingFactory.DAL.Entities.MaterialSupply.datasource" />
+    <None Include="Properties\DataSources\SawingFactory.DAL.Entities.OrderedProducts.datasource" />
+    <None Include="Properties\DataSources\SawingFactory.DAL.Entities.Product.datasource" />
     <None Include="Properties\DataSources\SawingFactory.Entities.Furniture.datasource" />
     <None Include="Properties\DataSources\SawingFactory.Entities.FurnitureStock.datasource" />
     <None Include="Properties\DataSources\SawingFactory.Entities.Material.datasource" />
