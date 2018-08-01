@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.orderedProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -94,6 +96,8 @@
             // 
             this.Product.DataPropertyName = "ProductId";
             this.Product.DataSource = this.productBindingSource;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Product.DefaultCellStyle = dataGridViewCellStyle1;
             this.Product.DisplayMember = "Name";
             this.Product.HeaderText = "Product";
             this.Product.Name = "Product";
@@ -101,6 +105,8 @@
             // 
             // Image
             // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Image.DefaultCellStyle = dataGridViewCellStyle2;
             this.Image.HeaderText = "Image";
             this.Image.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Image.Name = "Image";

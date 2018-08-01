@@ -79,11 +79,23 @@
     <Compile Include="Forms\FurnitureSupplyForm.Designer.cs">
       <DependentUpon>FurnitureSupplyForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ManagerOrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagerOrdersForm.Designer.cs">
+      <DependentUpon>ManagerOrdersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MaterialSupplyForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\MaterialSupplyForm.Designer.cs">
       <DependentUpon>MaterialSupplyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HandledOrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HandledOrdersForm.Designer.cs">
+      <DependentUpon>HandledOrdersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ProducedProductsForm.cs">
       <SubType>Form</SubType>
@@ -238,6 +250,12 @@
     <Compile Include="DAL\Migrations\201808010824238_add_auto_icrement_to_furniture_stock.Designer.cs">
       <DependentUpon>201808010824238_add_auto_icrement_to_furniture_stock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CustomerOrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerOrdersForm.Designer.cs">
+      <DependentUpon>CustomerOrdersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DAL\Migrations\201808011336039_add_auto_increment_to_order.resx">
@@ -252,8 +270,17 @@
     <EmbeddedResource Include="Forms\CreateOrderForm.resx">
       <DependentUpon>CreateOrderForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerOrdersForm.resx">
+      <DependentUpon>CustomerOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FurnitureSupplyForm.resx">
       <DependentUpon>FurnitureSupplyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HandledOrdersForm.resx">
+      <DependentUpon>HandledOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagerOrdersForm.resx">
+      <DependentUpon>ManagerOrdersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MaterialSupplyForm.resx">
       <DependentUpon>MaterialSupplyForm.cs</DependentUpon>
@@ -356,6 +383,7 @@
     <None Include="Properties\DataSources\SawingFactory.DAL.Entities.FurnitureStock.datasource" />
     <None Include="Properties\DataSources\SawingFactory.DAL.Entities.Material.datasource" />
     <None Include="Properties\DataSources\SawingFactory.DAL.Entities.MaterialSupply.datasource" />
+    <None Include="Properties\DataSources\SawingFactory.DAL.Entities.Order.datasource" />
     <None Include="Properties\DataSources\SawingFactory.DAL.Entities.OrderedProducts.datasource" />
     <None Include="Properties\DataSources\SawingFactory.DAL.Entities.Product.datasource" />
     <None Include="Properties\DataSources\SawingFactory.Entities.Furniture.datasource" />
