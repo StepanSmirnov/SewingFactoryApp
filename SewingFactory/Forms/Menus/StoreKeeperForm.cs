@@ -23,11 +23,23 @@ namespace SawingFactory.Forms
 
         private void StoreKeeperForm_Load(object sender, EventArgs e)
         {
-            AddMenuItem("Остатки ткани", showMaterials);
-            AddMenuItem("Остатки фурнитуры", showFurniture);
+            AddMenuItem("Остатки ткани", showMaterialsStock);
+            AddMenuItem("Остатки фурнитуры", showFurnituresStock);
             AddMenuItem("Поставка ткани", showMaterialSupply);
             AddMenuItem("Поставка фурнитуры", showFurnituresSupply);
-            showMaterials(sender, e);
+            AddMenuItem("Фурнитура", showFurnitures);
+            AddMenuItem("Ткани", showMaterials);
+            showMaterialsStock(sender, e);
+        }
+
+        private void showMaterials(object sender, EventArgs e)
+        {
+            ShowNestedForm(new MaterialsForm());
+        }
+
+        private void showFurnitures(object sender, EventArgs e)
+        {
+            ShowNestedForm(new FurnituresForm());
         }
 
         private void showFurnituresSupply(object sender, EventArgs e)
@@ -40,12 +52,12 @@ namespace SawingFactory.Forms
             ShowNestedForm(new MaterialSupplyForm());
         }
 
-        private void showFurniture(object sender, EventArgs e)
+        private void showFurnituresStock(object sender, EventArgs e)
         {
             ShowNestedForm(new FurnitureStockForm());
         }
 
-        private void showMaterials(object sender, EventArgs e)
+        private void showMaterialsStock(object sender, EventArgs e)
         {
             ShowNestedForm(new MaterialStockForm());
         }

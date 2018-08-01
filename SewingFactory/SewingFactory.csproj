@@ -74,6 +74,12 @@
     <Compile Include="Forms\CreateOrderForm.Designer.cs">
       <DependentUpon>CreateOrderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FurnituresForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FurnituresForm.Designer.cs">
+      <DependentUpon>FurnituresForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FurnitureSupplyForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,12 @@
     </Compile>
     <Compile Include="Forms\ManagerOrdersForm.Designer.cs">
       <DependentUpon>ManagerOrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MaterialsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MaterialsForm.Designer.cs">
+      <DependentUpon>MaterialsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MaterialsStockReport.cs">
       <SubType>Form</SubType>
@@ -280,6 +292,9 @@
     <EmbeddedResource Include="Forms\CustomerOrdersForm.resx">
       <DependentUpon>CustomerOrdersForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FurnituresForm.resx">
+      <DependentUpon>FurnituresForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FurnitureSupplyForm.resx">
       <DependentUpon>FurnitureSupplyForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -288,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManagerOrdersForm.resx">
       <DependentUpon>ManagerOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MaterialsForm.resx">
+      <DependentUpon>MaterialsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MaterialsStockReport.resx">
       <DependentUpon>MaterialsStockReport.cs</DependentUpon>

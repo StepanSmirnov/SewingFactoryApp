@@ -31,7 +31,7 @@ namespace SawingFactory.Forms
             AddMenuItem("Изделия", showProducts);
             AddMenuItem("Остатки продукции", showProducedProducts);
             AddMenuItem("Новые заказы", showNewOrders);
-            AddMenuItem("Заказы в обработке", showHandledOrders);
+            AddMenuItem("Взятые заказы", showHandledOrders);
             showProducts(sender, e);
         }
 

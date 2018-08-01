@@ -61,11 +61,11 @@
             this.priceDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.orderBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 91);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(604, 370);
+            this.dataGridView1.Size = new System.Drawing.Size(604, 461);
             this.dataGridView1.TabIndex = 1;
             // 
             // orderIdDataGridViewTextBoxColumn
@@ -142,9 +142,9 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "ManagerOrdersForm";
             this.Load += new System.EventHandler(this.ManagerOrdersForm_Load);
-            this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.dataGridView1, 0);
             this.Controls.SetChildIndex(this.panel3, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
