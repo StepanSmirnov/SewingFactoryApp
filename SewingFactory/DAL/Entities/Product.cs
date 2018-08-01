@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SawingFactory.Entities
+namespace SawingFactory.DAL.Entities
 {
     public class Product
     {
@@ -47,9 +47,8 @@ namespace SawingFactory.Entities
         {
             get
             {
-                return 0;
-                //if (ProductsFurnitures == null) return 0;
-                //return ProductsFurnitures.Sum(f => f.Quantity * f.Furniture.Price).Value;
+                if (ProductsFurnitures == null) return 0;
+                return ProductsFurnitures.Sum(f => f.Quantity * f.Furniture.Price).Value;
             }
         }
     }

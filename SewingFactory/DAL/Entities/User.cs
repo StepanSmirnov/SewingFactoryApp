@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SawingFactory.Entities
+namespace SawingFactory.DAL.Entities
 {
     public class User
     {

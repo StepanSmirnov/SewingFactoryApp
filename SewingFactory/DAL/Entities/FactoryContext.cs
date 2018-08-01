@@ -1,10 +1,10 @@
 ﻿using System.Data.Entity;
 
-namespace SawingFactory.Entities
+namespace SawingFactory.DAL.Entities
 {
     public class FactoryContext : DbContext
     {
-        public FactoryContext():base("DBConnection")
+        public FactoryContext():base("name=DBConnection")
         {
         }
 
@@ -20,9 +20,5 @@ namespace SawingFactory.Entities
         public DbSet<PruducedProduct> PruducedProducts { get; set; }
         public DbSet<ProductsHistory> ProductsHistories { get; set; }
         public DbSet<ProductsFurnitureHisotry> ProductsFurnitureHisotries { get; set; }
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            //modelBuilder.Entity<Product>().Ha<ProductsFurniture>(p => p.Furnitures).WithMany(f => f.Product).Map
-        }
     }
 }

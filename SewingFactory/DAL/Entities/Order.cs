@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SawingFactory.Entities
+namespace SawingFactory.DAL.Entities
 {
     public class Order
     {

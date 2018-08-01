@@ -29,15 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.Text = "Кладовщик";
-            // 
-            // panel1
-            // 
-            this.panel1.Visible = false;
             // 
             // StoreKeeperForm
             // 
@@ -46,6 +43,7 @@
             this.Name = "StoreKeeperForm";
             this.Load += new System.EventHandler(this.StoreKeeperForm_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

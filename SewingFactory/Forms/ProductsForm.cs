@@ -1,4 +1,4 @@
-﻿using SawingFactory.Entities;
+﻿using SawingFactory.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,17 +18,25 @@ namespace SawingFactory.Forms
             InitializeComponent();
         }
 
-        public ProductsForm(BaseForm baseForm) : base(baseForm)
-        {
-            InitializeComponent();
-        }
-
         private void ProductsForm_Load(object sender, EventArgs e)
         {
             using (var context= new FactoryContext())
             {
-                context.Products.Load();
-                dataGridView1.DataSource = context.Products.Local.Select;
+                dataGridView1.DataSource = context.Products.Select(p =>
+                new
+                {
+                    p.ProductId,
+                    p.Name,
+                    p.Width,
+                    p.WidthUnit,
+                    p.Length,
+                    p.LengthUnit,
+                    //p.Price,
+                    p.Image,
+                    p.Comment,
+                }).ToList();
+                //dataGridView1.DataSource = context.Products.Include("Materials").Include("ProductsFurnitures").ToList();
+
             }
         }
     }

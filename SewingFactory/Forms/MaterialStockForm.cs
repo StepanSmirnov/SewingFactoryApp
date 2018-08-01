@@ -1,4 +1,4 @@
-﻿using SawingFactory.Entities;
+﻿using SawingFactory.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,11 +15,6 @@ namespace SawingFactory.Forms
     public partial class MaterialStockForm : BaseNestedForm
     {
         public MaterialStockForm()
-        {
-            InitializeComponent();
-        }
-
-        public MaterialStockForm(BaseForm baseForm) : base(baseForm)
         {
             InitializeComponent();
         }

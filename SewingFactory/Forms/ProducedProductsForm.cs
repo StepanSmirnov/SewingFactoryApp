@@ -1,4 +1,4 @@
-﻿using SawingFactory.Entities;
+﻿using SawingFactory.DAL.Entities;
 using System;
 using System.Data;
 using System.Data.Entity;
@@ -17,14 +17,14 @@ namespace SawingFactory.Forms
         {
             using (var context = new FactoryContext())
             {
-                var query = context.PruducedProducts.Select(prod => new
+                var query = context.PruducedProducts.AsEnumerable().Select(prod => new
                 {
                     prod.ProductId,
                     prod.Product.Name,
                     prod.Quantity,
                     prod.Product.Price
                 });
-                
+                dataGridView1.DataSource = query.ToList();
             }
         }
     }

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SawingFactory.Entities
+namespace SawingFactory.DAL.Entities
 {
     public class MaterialRoll
     {
@@ -19,10 +19,6 @@ namespace SawingFactory.Entities
         public string MaterialId { get; set; }
         public virtual Material Material { get; set; }
 
-        public double Width { get; set; }
-        [Required]
-        public string WidthUnit { get; set; }
-
         public double Length { get; set; }
         [Required]
         public string LengthUnit { get; set; }
@@ -32,8 +28,6 @@ namespace SawingFactory.Entities
         public MaterialRoll(Material material)
         {
             Material = material;
-            Width = material.Width;
-            WidthUnit = material.WidthUnit;
             Length = material.Length;
             LengthUnit = material.LengthUnit;
         }
@@ -42,7 +36,7 @@ namespace SawingFactory.Entities
         {
             get
             {
-                return UnitConverter.Area(Width, WidthUnit, Length, LengthUnit, "м");
+                return UnitConverter.Area(Material.Width, Material.WidthUnit, Length, LengthUnit, "м");
             }
         }
 
@@ -50,7 +44,7 @@ namespace SawingFactory.Entities
         {
             get
             {
-                return Area / Material.Area * Material.Price; 
+                return Length / Material.Length * Material.Price; 
             }
         }
     }

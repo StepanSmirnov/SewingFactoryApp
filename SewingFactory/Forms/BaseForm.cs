@@ -1,4 +1,4 @@
-﻿using SawingFactory.Entities;
+﻿using SawingFactory.DAL.Entities;
 using System;
 using System.Windows.Forms;
 using System.Linq;

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Linq;
-using SawingFactory.Entities;
+using SawingFactory.DAL.Entities;
 using SawingFactory.Forms;
 
 namespace SawingFactory
@@ -55,7 +55,7 @@ namespace SawingFactory
             //Debug code
             using (var context = new FactoryContext())
             {
-                var user = context.Users.Single(u => u.RoleId == (int)User.UserRole.Manager);
+                var user = context.Users.Single(u => u.RoleId == (int)User.UserRole.StoreKeeper);
                 textBox1.Text = user.Login;
                 textBox2.Text = user.Password;
             }

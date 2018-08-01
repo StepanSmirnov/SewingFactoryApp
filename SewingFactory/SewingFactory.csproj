@@ -54,6 +54,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\Entities\MaterialSupply.cs" />
+    <Compile Include="Forms\FurnitureSupplyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FurnitureSupplyForm.Designer.cs">
+      <DependentUpon>FurnitureSupplyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MaterialSupplyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MaterialSupplyForm.Designer.cs">
+      <DependentUpon>MaterialSupplyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ProducedProductsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,14 +202,26 @@
       <DependentUpon>201807311654285_Add_prducts_history3.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL\Migrations\Configuration.cs" />
-    <Compile Include="DAL\Migrations\ProducedProductsForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Migrations\201807311806517_fix_produced_product_key.cs" />
+    <Compile Include="Migrations\201807311806517_fix_produced_product_key.Designer.cs">
+      <DependentUpon>201807311806517_fix_produced_product_key.cs</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Migrations\ProducedProductsForm.Designer.cs">
-      <DependentUpon>ProducedProductsForm.cs</DependentUpon>
+    <Compile Include="Migrations\201808010607358_remove_width_from_material_roll.cs" />
+    <Compile Include="Migrations\201808010607358_remove_width_from_material_roll.Designer.cs">
+      <DependentUpon>201808010607358_remove_width_from_material_roll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808010824238_add_auto_icrement_to_furniture_stock.cs" />
+    <Compile Include="Migrations\201808010824238_add_auto_icrement_to_furniture_stock.Designer.cs">
+      <DependentUpon>201808010824238_add_auto_icrement_to_furniture_stock.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FurnitureSupplyForm.resx">
+      <DependentUpon>FurnitureSupplyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MaterialSupplyForm.resx">
+      <DependentUpon>MaterialSupplyForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProducedProductsForm.resx">
       <DependentUpon>ProducedProductsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,8 +294,14 @@
     <EmbeddedResource Include="DAL\Migrations\201807311654285_Add_prducts_history3.resx">
       <DependentUpon>201807311654285_Add_prducts_history3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DAL\Migrations\ProducedProductsForm.resx">
-      <DependentUpon>ProducedProductsForm.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807311806517_fix_produced_product_key.resx">
+      <DependentUpon>201807311806517_fix_produced_product_key.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808010607358_remove_width_from_material_roll.resx">
+      <DependentUpon>201808010607358_remove_width_from_material_roll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808010824238_add_auto_icrement_to_furniture_stock.resx">
+      <DependentUpon>201808010824238_add_auto_icrement_to_furniture_stock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -282,6 +313,22 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\SawingFactory.DAL.Entities.Furniture.datasource" />
+    <None Include="Properties\DataSources\SawingFactory.DAL.Entities.FurnitureStock.datasource" />
+    <None Include="Properties\DataSources\SawingFactory.DAL.Entities.Material.datasource" />
+    <None Include="Properties\DataSources\SawingFactory.DAL.Entities.MaterialSupply.datasource" />
+    <None Include="Properties\DataSources\SawingFactory.Entities.Furniture.datasource" />
+    <None Include="Properties\DataSources\SawingFactory.Entities.FurnitureStock.datasource" />
+    <None Include="Properties\DataSources\SawingFactory.Entities.Material.datasource" />
+    <None Include="Properties\DataSources\SawingFactory.Entities.MaterialRoll.datasource" />
+    <None Include="Properties\DataSources\SawingFactory.Entities.Order.datasource" />
+    <None Include="Properties\DataSources\SawingFactory.Entities.OrderedProducts.datasource" />
+    <None Include="Properties\DataSources\SawingFactory.Entities.Product.datasource" />
+    <None Include="Properties\DataSources\SawingFactory.Entities.ProductsFurniture.datasource" />
+    <None Include="Properties\DataSources\SawingFactory.Entities.ProductsFurnitureHisotry.datasource" />
+    <None Include="Properties\DataSources\SawingFactory.Entities.ProductsHistory.datasource" />
+    <None Include="Properties\DataSources\SawingFactory.Entities.PruducedProduct.datasource" />
+    <None Include="Properties\DataSources\SawingFactory.Entities.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

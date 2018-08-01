@@ -36,6 +36,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 91);
@@ -43,12 +44,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(604, 370);
             this.dataGridView1.TabIndex = 1;
             // 
-            // FurnitureStock
+            // FurnitureStockForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(604, 461);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "FurnitureStock";
+            this.Name = "FurnitureStockForm";
             this.Load += new System.EventHandler(this.FurnitureStock_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.dataGridView1, 0);

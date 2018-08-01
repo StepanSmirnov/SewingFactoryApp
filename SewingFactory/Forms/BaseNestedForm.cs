@@ -15,9 +15,5 @@ namespace SawingFactory.Forms
             InitializeComponent();
         }
 
-        public BaseNestedForm(BaseForm baseForm) : base(baseForm)
-        {
-            InitializeComponent();
-        }
     }
 }
