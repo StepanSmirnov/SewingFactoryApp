@@ -73,6 +73,7 @@ namespace SawingFactory.Forms
                 }
                 context.Orders.Add(order);
                 context.SaveChanges();
+                MessageBox.Show("Заказ успешно создан");
             }
         }
 

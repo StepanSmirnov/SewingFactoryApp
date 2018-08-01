@@ -63,6 +63,10 @@
     <Compile Include="DAL\Migrations\201808011346583_change_foreign_keys.Designer.cs">
       <DependentUpon>201808011346583_change_foreign_keys.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Migrations\201808011443596_change_date_tipe.cs" />
+    <Compile Include="DAL\Migrations\201808011443596_change_date_tipe.Designer.cs">
+      <DependentUpon>201808011443596_change_date_tipe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CreateOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DAL\Migrations\201808011346583_change_foreign_keys.resx">
       <DependentUpon>201808011346583_change_foreign_keys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DAL\Migrations\201808011443596_change_date_tipe.resx">
+      <DependentUpon>201808011443596_change_date_tipe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateOrderForm.resx">
       <DependentUpon>CreateOrderForm.cs</DependentUpon>

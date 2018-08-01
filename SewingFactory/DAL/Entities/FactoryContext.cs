@@ -20,5 +20,11 @@ namespace SawingFactory.DAL.Entities
         public DbSet<PruducedProduct> PruducedProducts { get; set; }
         public DbSet<ProductsHistory> ProductsHistories { get; set; }
         public DbSet<ProductsFurnitureHisotry> ProductsFurnitureHisotries { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Order>().Property(o => o.Date).HasColumnType("datetime2");
+        }
     }
 }
