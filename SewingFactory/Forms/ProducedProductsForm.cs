@@ -1,6 +1,7 @@
 ﻿using SawingFactory.Entities;
 using System;
 using System.Data;
+using System.Data.Entity;
 using System.Linq;
 
 namespace SawingFactory.Forms
@@ -23,6 +24,7 @@ namespace SawingFactory.Forms
                     prod.Quantity,
                     prod.Product.Price
                 });
+                
             }
         }
     }

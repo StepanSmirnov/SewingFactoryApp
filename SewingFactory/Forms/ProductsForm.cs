@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -27,7 +28,7 @@ namespace SawingFactory.Forms
             using (var context= new FactoryContext())
             {
                 context.Products.Load();
-                dataGridView1.DataSource = context.Products.Local.ToBindingList();
+                dataGridView1.DataSource = context.Products.Local.Select;
             }
         }
     }

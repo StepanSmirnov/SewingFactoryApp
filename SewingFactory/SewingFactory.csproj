@@ -60,10 +60,10 @@
     <Compile Include="Forms\ProducedProductsForm.Designer.cs">
       <DependentUpon>ProducedProductsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Entities\ProductsFurnitureHisotry.cs" />
-    <Compile Include="Entities\PruducedProduct.cs" />
-    <Compile Include="Entities\ProductsHistory.cs" />
-    <Compile Include="Entities\UnitConverter.cs" />
+    <Compile Include="DAL\Entities\ProductsFurnitureHisotry.cs" />
+    <Compile Include="DAL\Entities\PruducedProduct.cs" />
+    <Compile Include="DAL\Entities\ProductsHistory.cs" />
+    <Compile Include="DAL\Entities\UnitConverter.cs" />
     <Compile Include="Forms\AuthForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,16 +76,16 @@
     <Compile Include="Forms\BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Entities\FactoryContext.cs" />
-    <Compile Include="Entities\Furniture.cs" />
-    <Compile Include="Entities\FurnitureStock.cs" />
-    <Compile Include="Entities\Material.cs" />
-    <Compile Include="Entities\MaterialRoll.cs" />
-    <Compile Include="Entities\Order.cs" />
-    <Compile Include="Entities\OrderedProducts.cs" />
-    <Compile Include="Entities\Product.cs" />
-    <Compile Include="Entities\ProductsFurniture.cs" />
-    <Compile Include="Entities\User.cs" />
+    <Compile Include="DAL\Entities\FactoryContext.cs" />
+    <Compile Include="DAL\Entities\Furniture.cs" />
+    <Compile Include="DAL\Entities\FurnitureStock.cs" />
+    <Compile Include="DAL\Entities\Material.cs" />
+    <Compile Include="DAL\Entities\MaterialRoll.cs" />
+    <Compile Include="DAL\Entities\Order.cs" />
+    <Compile Include="DAL\Entities\OrderedProducts.cs" />
+    <Compile Include="DAL\Entities\Product.cs" />
+    <Compile Include="DAL\Entities\ProductsFurniture.cs" />
+    <Compile Include="DAL\Entities\User.cs" />
     <Compile Include="Forms\Menus\BaseMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,59 +140,59 @@
     <Compile Include="Forms\Menus\StoreKeeperForm.Designer.cs">
       <DependentUpon>StoreKeeperForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807310536116_InitialCreate.cs" />
-    <Compile Include="Migrations\201807310536116_InitialCreate.Designer.cs">
+    <Compile Include="DAL\Migrations\201807310536116_InitialCreate.cs" />
+    <Compile Include="DAL\Migrations\201807310536116_InitialCreate.Designer.cs">
       <DependentUpon>201807310536116_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807310614416_Add required property to some fields.cs" />
-    <Compile Include="Migrations\201807310614416_Add required property to some fields.Designer.cs">
+    <Compile Include="DAL\Migrations\201807310614416_Add required property to some fields.cs" />
+    <Compile Include="DAL\Migrations\201807310614416_Add required property to some fields.Designer.cs">
       <DependentUpon>201807310614416_Add required property to some fields.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807310619502_Correct_field_name.cs" />
-    <Compile Include="Migrations\201807310619502_Correct_field_name.Designer.cs">
+    <Compile Include="DAL\Migrations\201807310619502_Correct_field_name.cs" />
+    <Compile Include="DAL\Migrations\201807310619502_Correct_field_name.Designer.cs">
       <DependentUpon>201807310619502_Correct_field_name.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807310630189_For import.cs" />
-    <Compile Include="Migrations\201807310630189_For import.Designer.cs">
+    <Compile Include="DAL\Migrations\201807310630189_For import.cs" />
+    <Compile Include="DAL\Migrations\201807310630189_For import.Designer.cs">
       <DependentUpon>201807310630189_For import.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807310746544_UserRole_as_enum.cs" />
-    <Compile Include="Migrations\201807310746544_UserRole_as_enum.Designer.cs">
+    <Compile Include="DAL\Migrations\201807310746544_UserRole_as_enum.cs" />
+    <Compile Include="DAL\Migrations\201807310746544_UserRole_as_enum.Designer.cs">
       <DependentUpon>201807310746544_UserRole_as_enum.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807310750419_hide_role.cs" />
-    <Compile Include="Migrations\201807310750419_hide_role.Designer.cs">
+    <Compile Include="DAL\Migrations\201807310750419_hide_role.cs" />
+    <Compile Include="DAL\Migrations\201807310750419_hide_role.Designer.cs">
       <DependentUpon>201807310750419_hide_role.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807311142207_Rename_material_stock.cs" />
-    <Compile Include="Migrations\201807311142207_Rename_material_stock.Designer.cs">
+    <Compile Include="DAL\Migrations\201807311142207_Rename_material_stock.cs" />
+    <Compile Include="DAL\Migrations\201807311142207_Rename_material_stock.Designer.cs">
       <DependentUpon>201807311142207_Rename_material_stock.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807311436422_add_produced_poducts.cs" />
-    <Compile Include="Migrations\201807311436422_add_produced_poducts.Designer.cs">
+    <Compile Include="DAL\Migrations\201807311436422_add_produced_poducts.cs" />
+    <Compile Include="DAL\Migrations\201807311436422_add_produced_poducts.Designer.cs">
       <DependentUpon>201807311436422_add_produced_poducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807311512379_Add_prducts_history.cs" />
-    <Compile Include="Migrations\201807311512379_Add_prducts_history.Designer.cs">
+    <Compile Include="DAL\Migrations\201807311512379_Add_prducts_history.cs" />
+    <Compile Include="DAL\Migrations\201807311512379_Add_prducts_history.Designer.cs">
       <DependentUpon>201807311512379_Add_prducts_history.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807311515502_Add_prducts_history1.cs" />
-    <Compile Include="Migrations\201807311515502_Add_prducts_history1.Designer.cs">
+    <Compile Include="DAL\Migrations\201807311515502_Add_prducts_history1.cs" />
+    <Compile Include="DAL\Migrations\201807311515502_Add_prducts_history1.Designer.cs">
       <DependentUpon>201807311515502_Add_prducts_history1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807311519122_Add_prducts_history2.cs" />
-    <Compile Include="Migrations\201807311519122_Add_prducts_history2.Designer.cs">
+    <Compile Include="DAL\Migrations\201807311519122_Add_prducts_history2.cs" />
+    <Compile Include="DAL\Migrations\201807311519122_Add_prducts_history2.Designer.cs">
       <DependentUpon>201807311519122_Add_prducts_history2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807311654285_Add_prducts_history3.cs" />
-    <Compile Include="Migrations\201807311654285_Add_prducts_history3.Designer.cs">
+    <Compile Include="DAL\Migrations\201807311654285_Add_prducts_history3.cs" />
+    <Compile Include="DAL\Migrations\201807311654285_Add_prducts_history3.Designer.cs">
       <DependentUpon>201807311654285_Add_prducts_history3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Migrations\ProducedProductsForm.cs">
+    <Compile Include="DAL\Migrations\Configuration.cs" />
+    <Compile Include="DAL\Migrations\ProducedProductsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Migrations\ProducedProductsForm.Designer.cs">
+    <Compile Include="DAL\Migrations\ProducedProductsForm.Designer.cs">
       <DependentUpon>ProducedProductsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -233,43 +233,43 @@
     <EmbeddedResource Include="Forms\Menus\StoreKeeperForm.resx">
       <DependentUpon>StoreKeeperForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807310536116_InitialCreate.resx">
+    <EmbeddedResource Include="DAL\Migrations\201807310536116_InitialCreate.resx">
       <DependentUpon>201807310536116_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807310614416_Add required property to some fields.resx">
+    <EmbeddedResource Include="DAL\Migrations\201807310614416_Add required property to some fields.resx">
       <DependentUpon>201807310614416_Add required property to some fields.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807310619502_Correct_field_name.resx">
+    <EmbeddedResource Include="DAL\Migrations\201807310619502_Correct_field_name.resx">
       <DependentUpon>201807310619502_Correct_field_name.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807310630189_For import.resx">
+    <EmbeddedResource Include="DAL\Migrations\201807310630189_For import.resx">
       <DependentUpon>201807310630189_For import.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807310746544_UserRole_as_enum.resx">
+    <EmbeddedResource Include="DAL\Migrations\201807310746544_UserRole_as_enum.resx">
       <DependentUpon>201807310746544_UserRole_as_enum.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807310750419_hide_role.resx">
+    <EmbeddedResource Include="DAL\Migrations\201807310750419_hide_role.resx">
       <DependentUpon>201807310750419_hide_role.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311142207_Rename_material_stock.resx">
+    <EmbeddedResource Include="DAL\Migrations\201807311142207_Rename_material_stock.resx">
       <DependentUpon>201807311142207_Rename_material_stock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311436422_add_produced_poducts.resx">
+    <EmbeddedResource Include="DAL\Migrations\201807311436422_add_produced_poducts.resx">
       <DependentUpon>201807311436422_add_produced_poducts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311512379_Add_prducts_history.resx">
+    <EmbeddedResource Include="DAL\Migrations\201807311512379_Add_prducts_history.resx">
       <DependentUpon>201807311512379_Add_prducts_history.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311515502_Add_prducts_history1.resx">
+    <EmbeddedResource Include="DAL\Migrations\201807311515502_Add_prducts_history1.resx">
       <DependentUpon>201807311515502_Add_prducts_history1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311519122_Add_prducts_history2.resx">
+    <EmbeddedResource Include="DAL\Migrations\201807311519122_Add_prducts_history2.resx">
       <DependentUpon>201807311519122_Add_prducts_history2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807311654285_Add_prducts_history3.resx">
+    <EmbeddedResource Include="DAL\Migrations\201807311654285_Add_prducts_history3.resx">
       <DependentUpon>201807311654285_Add_prducts_history3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\ProducedProductsForm.resx">
+    <EmbeddedResource Include="DAL\Migrations\ProducedProductsForm.resx">
       <DependentUpon>ProducedProductsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

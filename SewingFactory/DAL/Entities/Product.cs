@@ -47,7 +47,9 @@ namespace SawingFactory.Entities
         {
             get
             {
-                return ProductsFurnitures.Sum(f => f.Quantity * f.Furniture.Price).Value;
+                return 0;
+                //if (ProductsFurnitures == null) return 0;
+                //return ProductsFurnitures.Sum(f => f.Quantity * f.Furniture.Price).Value;
             }
         }
     }
