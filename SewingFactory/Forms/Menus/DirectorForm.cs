@@ -24,7 +24,13 @@ namespace SawingFactory.Forms
         private void DirectorForm_Load(object sender, EventArgs e)
         {
             AddMenuItem("Изделия", showProducts);
+            AddMenuItem("Остатки материалов", showMaterialsReport);
             showProducts(sender, e);
+        }
+
+        private void showMaterialsReport(object sender, EventArgs e)
+        {
+            ShowNestedForm(new MaterialsStockReport());
         }
 
         private void showProducts(object sender, EventArgs e)

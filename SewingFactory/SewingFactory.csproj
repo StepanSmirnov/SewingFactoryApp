@@ -43,6 +43,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity.Design" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -84,6 +85,12 @@
     </Compile>
     <Compile Include="Forms\ManagerOrdersForm.Designer.cs">
       <DependentUpon>ManagerOrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MaterialsStockReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MaterialsStockReport.Designer.cs">
+      <DependentUpon>MaterialsStockReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MaterialSupplyForm.cs">
       <SubType>Form</SubType>
@@ -281,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManagerOrdersForm.resx">
       <DependentUpon>ManagerOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MaterialsStockReport.resx">
+      <DependentUpon>MaterialsStockReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MaterialSupplyForm.resx">
       <DependentUpon>MaterialSupplyForm.cs</DependentUpon>
