@@ -14,6 +14,22 @@ namespace SawingFactory.Forms
 {
     public partial class MaterialSupplyForm : BaseNestedForm
     {
+        public class MaterialSupply
+        {
+            public string MaterialId { get; set; }
+            public virtual Material Material { get; set; }
+            public int Quantity { get; set; }
+
+            public double Price
+            {
+                get
+                {
+                    return Material.Price * Quantity;
+                }
+            }
+
+        }
+
         public MaterialSupplyForm()
         {
             InitializeComponent();

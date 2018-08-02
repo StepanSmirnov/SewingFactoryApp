@@ -33,6 +33,7 @@ namespace SawingFactory.Forms
                 using (var context = new FactoryContext())
                 {
                     var prod = context.Products.Single(p => p.ProductId == id);
+                    if (prod.Image == null) return;
                     MemoryStream s = new MemoryStream(prod.Image);
                     row.Cells[1].Value = System.Drawing.Image.FromStream(s);
                 }
@@ -47,6 +48,7 @@ namespace SawingFactory.Forms
                 order.Customer = context.Users.Single(u => u.Login == user_.Login && u.Password == user_.Password);
                 order.Date = DateTime.Now;
                 order.Stage = "новый";
+                order.Price = 0;
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     try
@@ -65,8 +67,9 @@ namespace SawingFactory.Forms
                             return;
                         }
                         context.OrderedProducts.Add(prods);
+                        order.Price += context.Products.Single(p => p.ProductId == prods.ProductId).Price;
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
                         continue;
                     }

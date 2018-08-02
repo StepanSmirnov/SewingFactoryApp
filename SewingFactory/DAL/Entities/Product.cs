@@ -14,6 +14,7 @@ namespace SawingFactory.DAL.Entities
         public Product()
         {
             Materials = new HashSet<Material>();
+            ProductsFurnitures = new HashSet<ProductsFurniture>();
         }
 
         [Key]
@@ -47,8 +48,12 @@ namespace SawingFactory.DAL.Entities
         {
             get
             {
-                if (ProductsFurnitures == null) return 0;
-                return ProductsFurnitures.Sum(f => f.Quantity * f.Furniture.Price).Value;
+                double price = 0;
+                if (ProductsFurnitures != null && ProductsFurnitures.Count > 0)
+                    price += ProductsFurnitures.Sum(f => f.Quantity * f.Furniture.Price).Value;
+                if (Materials != null && Materials.Count > 0)
+                    price += Materials.Average(m => m.Price / m.Area) * Area;
+                return price;
             }
         }
     }

@@ -100,7 +100,7 @@
             // 
             // materialSupplyBindingSource
             // 
-            this.materialSupplyBindingSource.DataSource = typeof(SawingFactory.DAL.Entities.MaterialSupply);
+            this.materialSupplyBindingSource.DataSource = typeof(SawingFactory.Forms.MaterialSupplyForm.MaterialSupply);
             // 
             // panel2
             // 

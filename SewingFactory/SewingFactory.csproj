@@ -55,7 +55,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\Entities\MaterialSupply.cs" />
     <Compile Include="DAL\Migrations\201808011336039_add_auto_increment_to_order.cs" />
     <Compile Include="DAL\Migrations\201808011336039_add_auto_increment_to_order.Designer.cs">
       <DependentUpon>201808011336039_add_auto_increment_to_order.cs</DependentUpon>

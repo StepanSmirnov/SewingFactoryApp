@@ -55,7 +55,7 @@ namespace SawingFactory
             //Debug code
             using (var context = new FactoryContext())
             {
-                var user = context.Users.Single(u => u.RoleId == (int)User.UserRole.StoreKeeper);
+                var user = context.Users.Where(u => u.RoleId == (int)User.UserRole.StoreKeeper).First();
                 textBox1.Text = user.Login;
                 textBox2.Text = user.Password;
             }
