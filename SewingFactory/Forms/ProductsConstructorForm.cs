@@ -101,7 +101,7 @@ namespace SawingFactory.Forms
             widthEdit.Value = productPicture.Width * scale;
             lengthEdit.Value = productPicture.Height * scale;
             }
-            catch (ArgumentOutOfRangeException ex)
+            catch (ArgumentOutOfRangeException)
             {
                 CropImage();
             }

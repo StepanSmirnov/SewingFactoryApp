@@ -66,7 +66,7 @@ namespace SawingFactory.Forms
                         }
                         context.OrderedProducts.Add(prods);
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         continue;
                     }

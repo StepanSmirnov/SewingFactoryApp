@@ -74,7 +74,7 @@ namespace SawingFactory.Forms
                     var id = Int32.Parse(row.Cells[0].Value.ToString());
                     return id;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     return null;
                 }
